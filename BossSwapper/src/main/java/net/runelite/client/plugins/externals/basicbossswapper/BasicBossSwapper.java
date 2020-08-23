@@ -251,6 +251,41 @@ public class BasicBossSwapper extends Plugin
 				break;
 		}
 	}
+	
+	
+	@Subscribe
+	public void onAnimation(Animation event)
+	{
+		if (run)
+		{
+			return;
+		}
+
+		int id = event.getAnimation().getId();
+
+		switch (id)
+		{
+			case 8595:
+				if (!client.isPrayerActive(Prayer.PROTECT_FROM_MAGIC))
+				{
+					swapMage = true;
+				}
+				break;
+			case 8596:
+				if (!client.isPrayerActive(Prayer.PROTECT_FROM_MISSILES))
+				{
+					swapRange = true;
+				}
+				break;
+			case 8594:
+				if (!client.isPrayerActive(Prayer.PROTECT_FROM_MELEE))
+				{
+					swapMelee = true;
+				}
+				break;
+		}
+	}
+	
 
 	@Subscribe
 	public void onNpcSpawned(NpcSpawned event)
@@ -267,6 +302,8 @@ public class BasicBossSwapper extends Plugin
 				break;
 		}
 	}
+
+
 
 	@Subscribe
 	public void onNpcDespawned(NpcDespawned event)
