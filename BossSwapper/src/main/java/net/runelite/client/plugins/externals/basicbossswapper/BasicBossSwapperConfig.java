@@ -88,7 +88,7 @@ public interface BasicBossSwapperConfig extends Config
 	@ConfigTitleSection(
 		position = 1,
 		keyName = "olmConfig",
-		name = "Olm Config",
+		name = "Try number 1",
 		description = ""
 	)
 	default Title olmConfig()
