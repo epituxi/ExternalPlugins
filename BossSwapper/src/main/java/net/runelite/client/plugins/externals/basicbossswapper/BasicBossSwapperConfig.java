@@ -68,7 +68,7 @@ public interface BasicBossSwapperConfig extends Config
 		name = "Nightmare",
 		description = ""
 	)
-	default Title olmConfig()
+	default Title nightmareConfig()
 	{
 		return new Title();
 	}
