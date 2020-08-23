@@ -64,6 +64,29 @@ public interface BasicBossSwapperConfig extends Config
 
 	@ConfigTitleSection(
 		position = 1,
+		keyName = "nightmareConfig",
+		name = "Nightmare",
+		description = ""
+	)
+	default Title olmConfig()
+	{
+		return new Title();
+	}
+
+	@ConfigItem(
+		position = 0,
+		keyName = "swapNMAutos",
+		name = "Swap on nightmare Auto Attacks",
+		description = "This will swap prayers for nightmares auto attacks.",
+		titleSection = "nightmareConfig"
+	)
+	default boolean swapAutos()
+	{
+		return false;
+	}
+
+	@ConfigTitleSection(
+		position = 1,
 		keyName = "olmConfig",
 		name = "Olm Config",
 		description = ""
